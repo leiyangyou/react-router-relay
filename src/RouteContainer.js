@@ -50,6 +50,7 @@ function RouteContainer(
         ...params,
         ...props,
       },
+      queryConfigParams: params,
       routerProps: {
         ...routerProps,
         ...extraProps,
