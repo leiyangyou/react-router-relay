@@ -15,7 +15,7 @@
     "build-es": "rimraf es && cross-env BABEL_ENV=es babel src -d es",
     "build-fixtures": "babel-node test/fixtures/updateSchema.js",
     "lint": "eslint src test *.js",
-    "prepublish": "npm run build",
+    "prepublish": "npm install --ignore-scripts && npm run build",
     "tdd": "cross-env NODE_ENV=test karma start",
     "test": "npm run build-fixtures && npm run lint && npm run testonly",
     "testonly": "npm run tdd -- --single-run"
